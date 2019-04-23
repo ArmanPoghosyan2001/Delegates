@@ -4,28 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Delegates
+namespace _005_Delegates
 {
-    static class MyClass
-    {
-        public static void Method()
-        {
-            Console.WriteLine("Message with delegate");
-        }
-    }
-
     public delegate void MyDelegate();
 
     class Program
     {
         static void Main(string[] args)
         {
-            MyDelegate del = new MyDelegate(MyClass.Method);
+            MyDelegate myDelegate = delegate { Console.WriteLine("Hello!"); };
 
-            del.Invoke();
-
-            del();
-
+            myDelegate();
             Console.ReadKey();
         }
     }

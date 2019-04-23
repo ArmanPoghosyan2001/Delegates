@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Delegates
+namespace _013_Delegates
 {
-    static class MyClass
+    class MyClass
     {
         public static void Method()
         {
-            Console.WriteLine("Message with delegate");
+            Console.WriteLine("Something");
         }
     }
 
@@ -20,11 +20,8 @@ namespace Delegates
     {
         static void Main(string[] args)
         {
-            MyDelegate del = new MyDelegate(MyClass.Method);
-
-            del.Invoke();
-
-            del();
+            MyDelegate myDelegate = MyClass.Method;
+            myDelegate();
 
             Console.ReadKey();
         }
